@@ -4,7 +4,7 @@ export type Page = 'login' | 'dashboard' | 'inbox' | 'security' | 'darkdata' | '
 // ── 보안 등급 ──────────────────────────────────────────────
 export type SecurityLevel = 'safe' | 'warn' | 'danger'
 
-// ── AI 분석 결과 (POST /api/analyze 응답) ─────────────────
+// ── AI 분석 결과 ───────────────────────────────────────────
 export interface SecurityIssue {
   type: SecurityLevel
   title: string
@@ -21,14 +21,22 @@ export interface DarkDataItem {
   reason: string
 }
 
+export interface CalendarEvent {
+  title: string
+  date: string
+  time: string | null
+  location: string | null
+}
+
 export interface AnalysisResult {
   subject: string
   summary: string
   security: SecurityInfo
   darkdata: DarkDataItem[]
+  calendar: CalendarEvent[]
 }
 
-// ── DB 레코드 (GET /api/mails 응답) ───────────────────────
+// ── DB 레코드 ──────────────────────────────────────────────
 export interface MailRecord {
   id: number
   subject: string | null
@@ -38,10 +46,10 @@ export interface MailRecord {
   dark_reason: string | null
   security_level: SecurityLevel
   user_id?: number | null
-  created_at: string   // ISO 8601
+  created_at: string
 }
 
-// ── 스팸 키워드 (GET /api/keywords 응답) ──────────────────
+// ── 스팸 키워드 ────────────────────────────────────────────
 export interface SpamKeyword {
   id: number
   keyword: string
@@ -49,14 +57,14 @@ export interface SpamKeyword {
   created_at: string
 }
 
-// ── 대시보드 통계 (세션 로컬 상태) ────────────────────────
+// ── 대시보드 통계 ──────────────────────────────────────────
 export interface SessionStats {
   total: number
   dark: number
   alerts: number
 }
 
-// ── 네비게이션 아이템 ──────────────────────────────────────
+// ── 네비게이션 ─────────────────────────────────────────────
 export interface NavItem {
   label: string
   page: Page

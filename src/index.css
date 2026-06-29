@@ -1,36 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Typography ─────────────────────────────────────── */
-  --font-sans:  'Noto Sans KR', sans-serif;
-  --font-serif: 'Noto Serif KR', serif;
+  --font-sans:  'Pretendard', sans-serif;
+  --font-serif: 'Pretendard', sans-serif;
 
-  /* ── Text Scale ─────────────────────────────────────── */
-  /* Tailwind 기본(xs=12, sm=14, lg=18, xl=20)과 겹치지 않는 값만 추가 */
-  --text-hint:    0.625rem;   /*  10px — 섹션 레이블, 서브 태그 */
-  --text-caption: 0.6875rem;  /*  11px — 배지, 힌트, 보조 설명 */
-  --text-body:    0.8125rem;  /*  13px — 본문, 입력, 네비 아이템 */
-  --text-subhead: 0.9375rem;  /*  15px — topbar 제목 */
-  --text-hero:    1.375rem;   /*  22px — 로그인 브랜드 */
-  --text-stat:    1.75rem;    /*  28px — 대시보드 통계 숫자 */
+  --text-hint:    0.625rem;
+  --text-caption: 0.6875rem;
+  --text-body:    0.8125rem;
+  --text-subhead: 0.9375rem;
+  --text-hero:    1.375rem;
+  --text-stat:    1.75rem;
 
-  /* ── Brand ──────────────────────────────────────────── */
-  --color-brand:      #0ea5e9;
-  --color-brand-dark: #0284c7;
-  --color-brand-pale: #38bdf8;  /* 사이드바 active 텍스트 */
+  --color-brand:      #6366f1;
+  --color-brand-dark: #4f46e5;
+  --color-brand-pale: #818cf8;
 
-  /* ── Surfaces ───────────────────────────────────────── */
-  --color-surface: #eef2f8;   /* 페이지 배경 */
-  --color-field:   #f8fafc;   /* 입력 필드 배경 */
-  --color-dark:    #0f172a;   /* 사이드바, 버튼, 로그인 왼쪽 패널 */
-  --color-darker:  #0a0f1a;   /* 로그인 왼쪽 패널 */
+  --color-surface: #f7f7f5;
+  --color-field:   #f1f1ef;
+  --color-dark:    #191919;
+  --color-darker:  #0f0f0f;
 
-  /* ── Status ─────────────────────────────────────────── */
-  --color-safe:         #15803d;
+  --color-safe:         #16a34a;
   --color-safe-muted:   #f0fdf4;
-  --color-warn:         #b45309;
+  --color-warn:         #d97706;
   --color-warn-muted:   #fffbeb;
-  --color-danger:       #b91c1c;
+  --color-danger:       #dc2626;
   --color-danger-muted: #fef2f2;
 }
 
@@ -40,16 +34,17 @@
   body {
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-    background: linear-gradient(135deg, #e8f0fe 0%, #eef2f8 40%, #e8f4fd 100%);
+    background: #f7f7f5;
     min-height: 100vh;
+    color: #191919;
   }
 
   #root { min-height: 100vh; }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
+  from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.fade-in { animation: fadeIn 0.25s ease both; }
+.fade-in { animation: fadeIn 0.2s ease both; }
