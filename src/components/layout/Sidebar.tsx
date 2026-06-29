@@ -14,7 +14,7 @@ export default function Sidebar({ mainNav, analysisNav, open, onClose, activePag
     <aside className="w-60 h-full bg-dark flex flex-col px-5 py-7 overflow-y-auto">
       {/* 브랜드 */}
       <div className="mb-8">
-        <p className="font-serif text-[18px] font-bold text-white tracking-tight leading-none">매일메일</p>
+        <p className="font-serif text-[18px] font-bold text-white tracking-tight leading-none">메일트랙</p>
         <p className="text-hint text-white/30 mt-1.5 leading-relaxed">AI 이메일 보안 센티널</p>
       </div>
 

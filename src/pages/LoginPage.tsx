@@ -26,7 +26,7 @@ export default function LoginPage({ onLogin }: Props) {
 
           <div className="mb-auto relative">
             <p className="font-serif text-hero font-bold text-white tracking-tight leading-tight">
-              매일메일
+              메일트랙
             </p>
             <p className="text-caption text-white/35 mt-3 leading-relaxed">
               AI 기반 스마트<br />이메일 센티널
@@ -44,7 +44,7 @@ export default function LoginPage({ onLogin }: Props) {
 
           {/* Brand — mobile only (left panel hidden) */}
           <div className="md:hidden mb-8">
-            <p className="font-serif text-hero font-bold text-dark tracking-tight">매일메일</p>
+            <p className="font-serif text-hero font-bold text-dark tracking-tight">메일트랙</p>
             <p className="text-xs text-slate-500 mt-1.5">AI 기반 스마트 이메일 센티널</p>
           </div>
 
